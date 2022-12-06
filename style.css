@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Nunito:ital,wght@0,300;0,400;0,500;1,300&family=Permanent+Marker&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100&family=Square+Peg&family=Updock&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: poppins;
+}
+header {
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+.header-cont{
+    width: 150px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    background: #0488e0;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 30px;
+}
+.header-cont a{
+    text-decoration: none;
+    color: #fff;
+}
+.space-box{width:870px;}
+.btn-box{
+    padding: 10px;
+    display: flex;
+}
+.btn-box button{
+    height: 35px;
+    border: none;
+    background: transparent;
+    transition: transform 0.8s ease-out;
+}
+
+.btn-box button a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+}
+@media only screen and (max-width:900px){
+    .space-box{
+        width: 0px;
+    }
+    .header-cont{
+        margin-left: 0px;
+        width: 140px;
+    }
+}
+.navbar{
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+}
+.navbar button a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+}
+.header-cont h5 {
+    font-size: 25px;
+    font-weight: bold;
+}
+@media only screen and (max-width: 700px){
+    .header-cont .col-lg-2 {
+        width: 200px;
+    }
+}
+/* =============INITIAÇÃO PRINCIPAL CONTEUDO HOME PAGE=======================*/
+.destino-container{
+    padding:40px;
+}
+.container .destino-container .ro{
+    height: 340px;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding: 12px;
+    position: relative;
+}
+
+.container .destino-container .ro img{
+    width: 400px;
+    position: relative;
+}
+
+
+.container .destino-container .ro::-webkit-scrollbar{
+    display: none;
+    gap: 12px;
+}
+
+.container .destino-container .carossel-btn{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+
+}
+.container .destino-container .carossel-btn i{
+    font-size: 1.6em;
+    border-bottom: 1px solid #2c3e50;
+}
+
+/*.row .box-destino img{
+    width: 300px;
+}*/
+
+
+
+
+
+section .container{
+    margin-top: 10vh;
+}
+section .container .hmetext-box {
+    color: #2c3e50;
+}
+section .hmebtn-box{
+    padding: 10px;
+}
+.hmebtn-box button {
+    border: solid #000000 1px;
+    border-radius: 20px;
+    margin: 5px;
+    width: 480px;
+    text-align: left;
+    transition: transform 1s ease-in;
+}
+.hmebtn-box button:hover{
+    transform: scale(1);
+    background: #fff;
+    box-shadow: 5px 8px 8px #353434;
+}
+.hmebtn-box button i{
+    float: right;
+    justify-content: center;
+    align-items: center;
+}
+section .container .hmeimage-box img{
+    width: 580px;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 20%;
+    border-top-left-radius: 20%;
+    transition: transform 1s ease-out;
+}
+section .container .hmeimage-box img:hover{
+    transform: scale(1.1);
+}
+
+.hme-disciplinas{
+    background: #acbccc;
+}
+section .container h1{
+    font-weight:100;
+    color: #000000;
+}
+section .btndisciplinas-box button{
+    margin: 5px;
+    padding: 10px;
+    transition: transform 0.5s ease-in;
+}
+section .btndisciplinas-box button:hover{
+    background: linear-gradient(#fff, #acbccc);
+    transform: scale(0.9);
+    box-shadow: 5px 8px 8px #353434;
+}
+section #btn-escondir{
+    margin: auto;
+    width: 80px;
+    background: #acbccc;
+    border: none;
+    font-size: 1.6rem;
+    transition: all 1s;
+    animation: animate 2s infinite linear;
+}
+@keyframes animate{
+    0%{
+        color: #acbccc;
+    }
+    25%{
+        color: #385b66;
+    }
+    50%{
+        color: #cecece;
+    }
+    75%{
+        color: #0488e0;
+    }
+}
+section #box-escondido{
+    display: none;
+}
+section .cadre-box{
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+section .cadre-box h1{
+    font-weight: 100;
+    padding: 15px;
+}
+section .cadre-box .card{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    background: linear-gradient(#acbccc, #cecece, #abcdee);
+   border: solid 1px #acbccc;
+}
+section .cadre-box img {
+    width: 286px;
+}
+@media only screen and (max-width: 700px){
+    section .container .hmeimage-box img{
+        width: 380px;
+    }
+    .hmeimage-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+     section .container .hmebtn-box button{
+         font-size: 12px;
+         width: 300px
+     }
+    section .container .hmetext-box h3{
+        font-size: 18px;
+    }
+}
+/* INITIAÇÂO PRINCIPAL CONTEUDO FORMULARIO CADASTRO */
+.princip-cont {
+    margin-top: 40px;
+    position: relative;
+    box-sizing: border-box;
+    /*background: rgba(0, 0, 0, 0.1);*/
+   
+    
+}
+
+.princip-cont form {
+    margin-top: 40px;
+}
+.princip-cont .mb-3{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.princip-cont .mb-3 .msgErro{
+    text-align: center;
+    color: #e84646;
+}
+
+.princip-cont .d-grid .spinner-grow{
+    position: absolute;
+    padding: 6px;
+    left: 48%;
+    top: 84%;
+}
+
+.d-grid small{
+    text-align: center;
+    color: #000000;
+}
+.d-grid button {
+    all: unset;
+    width: 130px;
+    padding: 12px;
+    text-align: center;
+    background-color: #152b3c;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    margin: 6px auto;
+}
+.d-grid button:hover{
+    filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.9));
+}
+
+.d-grid p {
+    margin: auto;
+    border-bottom: 1px solid #777;
+}
+.princip-cont .mb-3 input{
+    border-bottom: 2px solid #d652eb;
+    border-radius: 10px;
+}
+.d-grid #saidaCadastro{
+    width: 290px;
+    margin: auto;
+    background: #029d76;
+    border-radius: 13px;
+    color: #fff;
+    transform: translateY(27%);
+    filter: drop-shadow(2px 2px 14px #029d76);
+}
+.princip-cont h2{
+    text-align: center;
+    padding: 20px;
+    font-weight: 400;
+}
+
+
+/*========INICIO FOOTER=============*/
+.footer-box {
+    margin-top: 40px;
+    padding: 20px;
+}
+.footer-box .row a{
+    text-decoration: none;
+    color: #000000;
+}
+.footer-box .row a:hover{
+    text-decoration: underline;
+    color: #0488e0;
+}

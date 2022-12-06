@@ -1,0 +1,738 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Lato:wght@100;300;400&family=League+Spartan:wght@100;200;400;500;600;700;800&family=Nunito:ital,wght@0,300;0,400;0,500;1,300&family=Oswald:wght@200;300;400;700&family=Permanent+Marker&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,800;1,100&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700&family=Square+Peg&family=Ubuntu:wght@300;400;500;700&family=Updock&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: ubuntu, sans-serif;
+    transition: all .34s ease;
+}
+
+body{
+    padding: 1px;
+    background: #4075cb;
+}
+
+#modal{
+    width: 60%;
+    position: absolute;
+    top: 0%;
+    flex-direction: column;
+    justify-content: center;
+    filter: drop-shadow(1px 1px 60px rgba(215, 82, 235, 0.157) );
+    margin: 2% auto;
+    border: none;
+    padding: 12px;
+    z-index: 1000;
+    h3{
+        color: #1e293b;
+    }
+    .form-editar{
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        input{
+            width: 260px ;
+            padding: 11px;
+            height: 36px;
+            border: none;
+            background: rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #fa5450;
+        }
+        textarea{
+            width: 260px ;
+            padding: 11px;
+            height: 170px;
+            border: none;
+            background: rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #fa5450;
+        }
+        #submitEdita{
+            width: 140px;
+            background: #fa5450;
+            margin: auto;
+            color: #fff;
+            padding: 6px 6px 6px 6px;
+        }
+        .bt{
+            width: 140px;
+            background: #fa5450;
+            margin: auto;
+            color: #fff;
+            padding: 6px 6px 6px 6px;
+            border:none;
+        }
+    }
+
+}
+
+//navbar starting here
+
+.navbar{
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    align-items: center;
+    grid-column-gap: 0px;
+    border-bottom: 1px solid rgba(119, 119, 119, 0.279);
+    .navbar-brand{
+    display: flex;
+    padding: 0px 0px 0px 15px;
+    img{
+        width: 45px;
+    }
+}
+  .d-flex{
+    margin: auto;
+    transform: translateX(0%);
+}
+  .d-flex form .btn{
+    color: #212121;
+    border: 1px solid #acbccc;
+    background-color: #cecece;
+    .fa-solid{
+        background-color: transparent;
+    }
+}
+  .d-flex form .btn:hover{
+    background: #acbccc;
+    color: #fff;
+}
+  .user-setting{
+    margin: 0px auto;
+    display: block;
+    position: relative;
+    ul{
+        display: flex;
+        list-style-type: none;
+        .nav-link{
+            color: #fff;
+        }
+    }
+    .btn-toggle{
+        display: none;
+    }
+}
+    .user-foto{
+        display: flex;
+        gap: 0px;
+        img{
+            display: flex;
+            width: 56px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .btn{
+            width: 15px;
+            height: 25px;
+            background: #fff;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .sombre{
+            background: rgb(151, 121, 121);
+        }
+        .link-out{
+            color: #fff;
+            i{
+                color: #fff;
+            }
+        }
+    }
+}
+
+//principal section sarting here
+
+.user{
+    position: relative;
+    margin: auto;
+    padding: 18px;
+    background: #fff;
+    color: #212121;
+    .container-fluid{
+        .user-wrapper{
+            display: block;
+            min-height: 100vh;
+            position: relative;
+            .user-profil-picture{
+                width: 170px;
+                img{
+                    width: 170px;
+                    display: flex;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+            .user-about{
+                width: 76%;
+                text-align: justify;
+                margin-top: 14px;
+                h5{
+                    border-bottom: 1px solid #fa5450;
+                    color: #fff;
+                }
+                .about-text{
+                    color: #212121;
+                }
+                .saidacv{
+                    border: none;
+                    border-radius: 30px;
+                    background: #1e293b;
+                    padding: 12px;
+                    color: #fff;
+                    text-transform: lowercase;
+                    text-decoration: none;
+                }
+                .saidacv:hover{
+                    background: #fa5450;
+                }
+            }
+            .user-info{
+                margin: 1rem auto;
+                padding: 6px;
+                color: #212121;
+                h4{
+                    text-transform: uppercase;
+                }
+                .user-function{
+                    text-transform: capitalize;
+                }
+                p{
+                    .user-local{
+                        text-transform: capitalize;
+                        font-size: .8em;
+                    }
+                }
+            }
+            .user-public{
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                margin-bottom: 18px;
+                gap: 16px;
+                li{
+                    list-style: none;
+                    position: relative;
+                    padding: 4px;
+                    i{
+                        color:#1e293b;
+                        font-size: 1.3rem;
+                    }
+                }
+                li:nth-child(2):before{
+                    content: '';
+                    position:absolute;
+                    width: 0%;
+                    height: 3px;
+                    background-color: #1e293b;
+                    bottom: 0;
+                    transition: width 0.34s ease;
+                }
+                li:nth-child(2):hover:before{
+                    width: 100%;
+                }
+            }
+            .user-socilamedia-link{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                position: relative;
+                width: 15%;
+                .nav-link{
+                    position: relative;
+                    i{
+                        font-size: 1.4em;
+                        color:#1e293b;
+                    }
+                }
+                .nav-link:before{
+                    content: attr(data-content);
+                    position: absolute;
+                    width: 170%;
+                    height: 155%;
+                    left: 50%;
+                    display: none;
+                    padding: 4px 0px 4px 0px;
+                    text-align: center;
+                    background: #1e293b;
+                    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.527));
+                    color: #fff;
+                    border-radius: 20px;
+                    z-index: 1000;
+                }
+                .nav-link:nth-child(1):hover:before{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .nav-link:nth-child(2):hover:before{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .nav-link:nth-child(3):hover:before{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+            }
+            .user-resum{
+                .nav-link{
+                    width: 140px;
+                    display: flex;
+                    justify-content: center;
+                    border: none;
+                    border-radius: 30px;
+                    background: #1e293b;
+                    padding: 7px;
+                    color: #fff;
+                }
+            }
+            }
+        }
+        .center-wrapper{
+            .user-setting-button{
+                display: flex;
+                gap:8px;
+                .bton{
+                    width: 110px;
+                    border: none;
+                    border-radius: 30px;
+                    background: #1e293b;
+                    padding: 7px;
+                    color: #fff;
+                    text-transform: lowercase;
+                }
+                .bton:hover{
+                    background: #fa5450;
+                }
+            }
+            .user-saida-info{
+                display: flex;
+                flex-direction: column;
+                margin-top: 1.9rem;
+                span{
+                    display: flex;
+                    gap: 8px;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+                .user-detalhe{
+                    padding: 6px;
+                    background: rgba(0, 0, 0, 0.2);
+                    width: 40%;
+                    height: auto;
+                    overflow: hidden;
+                    color: #212121;
+                }
+            }
+        }
+    }
+
+
+@media (max-width: 790px){
+    .navbar{
+        min-height: 60px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-content: flex-start;
+        .navbar-brand{
+            display: none;
+        }
+        .search{
+            margin: auto;
+            transform: translateX(-5%) translateY(-90%);
+        }
+        .user-setting{
+            position: absolute;
+            width: 50%;
+            height: 690px;
+            display: flex;
+            top: 0%;
+            left: 0%;
+            padding: 8px;
+            background: #fff;
+            z-index: 1;
+            display: none;
+            .btn-toggle{
+                display: block;
+                position: absolute;
+                border: none;
+                right: 4%;
+                top: 0%;
+                padding: 6px;
+                background: transparent;
+            }
+            .navbar-nav{
+                .nav-link{
+                    color: #000;
+                }
+            }
+        }
+        .user-foto{
+            margin-left: 0px;
+        }
+    }
+    .user{
+       .container-fluid{
+        .user-setting-button{
+            margin: 1rem auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+            .center-wrapper{
+                .user-saida-info{
+                    .user-detalhe{
+                    width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Post style css
+
+.container{
+    .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .post-wrapper{
+            width: 370px;
+            height: auto;
+            margin: 6rem auto;
+            background: rgb(236, 236, 236);
+            color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            //filter: drop-shadow(0px 0px 6px rgba(0,0,0,.6));
+            .post-header{
+                width: 370px;
+                height: 38px;
+                transform: translateX(-3.3%);
+                padding: 6px;
+                position: relative;
+                z-index: 2;
+                img{
+                    display: flex;
+                    width: 54px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+            .post-body{
+                width: 370px;
+                height: auto;
+                overflow: hidden;
+                display: flex;
+                position: relative;
+                justify-content: center;
+                transform: translateX(-3.2%);
+                margin: auto;
+                img{
+                    margin: auto;
+                    width: 100%;
+                }
+            }
+            .post-footer{
+                width: 370px;
+                height: auto;
+                overflow: hidden;
+                transform: translateX(-3.3%);
+                color: #333;
+                padding: 4px;
+                button{
+                    all: unset;
+                    cursor:pointer;
+                    padding: 2px;
+                    i{
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+        .comment-wrapper{
+            width: 370px;
+            form{
+                width: 107%;
+                margin: -27.8% auto;
+                display: flex;
+                justify-content: center;
+                background-color: #fff;
+                border-bottom: solid 4px #4075cb;
+                padding: 8px;
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+                transform: translateX(-3.3%);
+                input{
+                    width: 370px;
+                    height: 36px;
+                    margin: auto;
+                    border: 1px solid #333;
+                    border-radius: 8px;
+                    padding: 4px;
+                    
+                }
+                button{
+                    i{
+                        color: #4075cb;
+                    }
+                }
+            }
+        }
+        .saida-comment{
+            width: 370px;
+            height: auto;
+            overflow: hidden;
+            margin: auto auto 6px;
+            border-bottom-right-radius: 12px;
+            background: rgb(230, 230, 230);
+            transform: translateY(-25%);
+            h5{
+                background: rgba(119, 119, 119, 0.801);
+                padding: 8px;
+                color: #333;
+            }
+            p{
+                padding: 12px;
+                word-break: break-all;
+            }
+        }
+    }
+}
+
+//Login Form
+
+.container{
+    display: flex;
+    justify-content: center;
+    .login-content{
+        margin: 4rem auto;
+        border-left: 2px solid #4075cb;
+        box-shadow: (0px 0px 4px 2px rgba(0, 0, 0, 0.2));
+        padding: 36px;
+        .consigne{
+            a{
+                text-decoration: none;
+            }
+        }
+        #loginform{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.3rem;
+            gap: 18px;
+            .form-control{
+                width: 298px;
+                border-radius: 30px;
+                background: rgba(0, 0, 0, 0.1);
+            }
+            #loginSubmit{
+                width: 110px;
+                border: none;
+                border-radius: 30px;
+                background: #1e293b;
+                padding: 7px;
+                color: #fff;
+                
+            }
+            #loginSubmit:hover{
+                filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.9));
+                background: #fa5450;
+            }
+        }
+    }
+}
+
+//pagina vaga
+#formAddVaga{
+    width: 298px;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 22px;
+    gap: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: (0px 0px 4px 2px rgba(0, 0, 0, 0.2));
+    border-radius: 12px;
+    input{
+        width: 280px;
+        border-radius: 30px;
+        background: rgba(0, 0, 0, 0.1);
+        padding: 4px;
+    }
+    input[type=submit]{
+        width: 110px;
+        border: none;
+        border-radius: 30px;
+        background: #1e293b;
+        padding: 7px;
+        color: #fff;
+    }
+    input[type=submit]:hover{
+        filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.9));
+        background: #fa5450;
+    }
+    textarea{
+        background: rgba(0, 0, 0, 0.1);
+        padding: 9px;
+        border-radius: 12px;
+        border: 1px solid rgba(0, 0, 0, 0.9);
+    }
+}
+
+
+
+.container-vagas{
+    display: flex;
+    flex-direction: column;
+    .row{
+        width: 370px;
+        margin: 1rem auto;
+        box-shadow: (0px 0px 4px 2px rgba(0, 0, 0, 0.2));
+        padding: 18px;
+        .vaga-header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .vaga-body{
+            width: 100%;
+            height: auto;
+            word-wrap: break-word;
+            overflow: hidden;
+        }
+        .vaga-footer{
+            .button{
+                width: 110px;
+                border: none;
+                border-radius: 30px;
+                background: #1e293b;
+                padding: 7px;
+                color: #fff;
+            }
+            .button:hover{
+                filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.9));
+                background: #fa5450;
+            }
+        }
+    }
+    .form-applicaVaga{
+        position: absolute;
+        top: 15%;
+        z-index: 1000;
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        box-shadow: (0px 0px 4px 2px rgba(0, 0, 0, 0.2));
+        border-radius: 8px;
+        border: 1px solid #333;
+        background: #fff;
+        color: #333;
+        #cand-form{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 12px;
+            width: 40%;
+            input{
+                width: 280px;
+                border-radius: 30px;
+                background: rgba(0, 0, 0, 0.1);
+                padding: 4px;
+            }
+            div{
+                display: flex;
+                gap: 18px;
+                input[type=submit]{
+                    width: 135px;
+                    border: none;
+                    border-radius: 30px;
+                    background: #1e293b;
+                    padding: 7px;
+                    color: #fff;
+                }
+                #closeCand-form{
+                    width: 135px;
+                    border: none;
+                    border-radius: 30px;
+                    background: #fa5450;
+                    padding: 7px;
+                    color: #fff;
+                }
+            }
+            textarea{
+                background: rgba(0, 0, 0, 0.1);
+                padding: 9px;
+                border-radius: 12px;
+                border: 1px solid rgba(0, 0, 0, 0.9);
+            }
+        }
+    }
+}
+
+@media (max-width: 900px){
+    .navbar{
+        min-height: 60px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-content: flex-start;
+        .navbar-brand{
+            display: none;
+        }
+        .search{
+            margin: auto;
+            transform: translateX(-5%) translateY(-90%);
+        }
+        .user-setting{
+            position: absolute;
+            width: 50%;
+            height: 690px;
+            display: flex;
+            top: 0%;
+            left: 0%;
+            padding: 8px;
+            background: #fff;
+            z-index: 1;
+            display: none;
+            .btn-toggle{
+                display: block;
+                position: absolute;
+                border: none;
+                right: 4%;
+                top: 0%;
+                padding: 6px;
+                background: transparent;
+            }
+            .navbar-nav{
+                .nav-link{
+                    color: #000;
+                }
+            }
+        }
+        .user-foto{
+            margin-left: 0px;
+        }
+    }
+    .user{
+        .container-fluid{
+            .center-wrapper{
+                .user-saida-info{
+                    .user-detalhe{
+                     width: 70%;
+                    }
+                 }
+             }
+         }
+     }
+}
